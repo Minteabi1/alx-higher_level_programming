@@ -15,8 +15,3 @@ class Student:
         if attrs is None:
             return self.__dict__
         return {k: v for k, v in self.__dict__.items() if k in attrs}
-
-    def reload_from_json(self, json):
-        """ change attribute name """
-        for key, value in json.items():
-            setattr(self, key, value)
